@@ -25,9 +25,5 @@ urlpatterns = [
 
     path('vista/',views.vista, name='vista'),
     path('vista/index.html',views.vista, name='vista'),
-    path('vista/elements.html',views.vista2, name='vista'),
-    path('vista/generic.html',views.vista3, name='vista'),
-
-    path('vista2/',views.vista, name='vista2'),
-
+    
 ]

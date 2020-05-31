@@ -15,18 +15,6 @@ def vista(request):
     #return render(request, 'clase.html', {'title': "Bumblebee" , 'movies': Movie.objects.all()})
     return render(request, 'index.html')
 
-def vista2(request):
-
-    #https://docs.djangoproject.com/en/3.0/ref/templates/language/#templates
-    #return render(request, 'clase.html', {'title': "Bumblebee" , 'movies': Movie.objects.all()})
-    return render(request, 'elements.html')
-
-def vista3(request):
-
-    #https://docs.djangoproject.com/en/3.0/ref/templates/language/#templates
-    #return render(request, 'clase.html', {'title': "Bumblebee" , 'movies': Movie.objects.all()})
-    return render(request, 'generic.html')
-
 
 def vista4(request):
 
