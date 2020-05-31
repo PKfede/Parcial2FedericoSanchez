@@ -1,6 +1,8 @@
 from django.urls import path
 
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
 
@@ -20,5 +22,12 @@ urlpatterns = [
     path('client/login',views.login,name='login'),
     path('client/movies',views.movies,name='movies'),
     path('generate_password/<str:password>',views.makepassword,name='makepassword'),
+
+    path('vista/',views.vista, name='vista'),
+    path('vista/index.html',views.vista, name='vista'),
+    path('vista/elements.html',views.vista2, name='vista'),
+    path('vista/generic.html',views.vista3, name='vista'),
+
+    path('vista2/',views.vista, name='vista2'),
 
 ]
