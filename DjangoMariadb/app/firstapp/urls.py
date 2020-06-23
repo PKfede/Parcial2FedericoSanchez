@@ -19,11 +19,11 @@ urlpatterns = [
     path('client/addclinicalcase/', views.addclinicalcase, name='addclinicalcase'),
     path('client/addclinicalcasenote/', views.addclinicalcasenote, name='addclinicalcasenote'),
     #segundo parcial
-    path('client/login',views.login,name='login'),
+    path('login/',views.login,name='login'),
     path('client/movies',views.movies,name='movies'),
     path('generate_password/<str:password>',views.makepassword,name='makepassword'),
 
     path('vista/',views.vista, name='vista'),
     path('vista/index.html',views.vista, name='vista'),
-    
+    path('getJson',views.getJson, name='getJson'),
 ]

@@ -264,6 +264,41 @@ def movies(request):
 
 
 
+def getJson(request):
+
+    if request.method == 'POST':
+
+        if checkJson().isJson(request.body) == True:
+            response_data = {'Hola'}
+            #CHECK JSON CONTENT
+            json_data = json.loads(request.body)
+            attr_error = False
+            attrErrorMsg = ""
+
+            #user = content['user']
+            #password = content['password']
+            #print(content)
+            user = json_data['user']
+            password = json_data['password']
+            apikey = json_data['apikey']
+
+
+            if apikey == "hellothere":
+                if user.lower() == "fede":
+                    if password == "1111":
+                        return JsonResponse({"error": "false", "status": "200", "msj": "Datos correctos"})
+                    else:
+                        return JsonResponse({"error": "true", "status": "202", "msj": "Password incorrecto"})
+                else:
+                    return JsonResponse({"error": "true", "status": "202", "msj": "Usuario incorrecto"})
+            else:
+                return JsonResponse({"error": "true", "status": "203", "msj": "Api-key incorrecto"})
+
+
+
+        return JsonResponse(response_data, status=200)
+
+
 def login(request):
     #VALIDATE METHOD
     if request.method == 'POST':
